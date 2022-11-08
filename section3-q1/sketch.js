@@ -16,7 +16,7 @@ function draw(){
   if(keyIsDown(" ".charCodeAt(0))){x=5;}
   else{x=1;}   
 
-  //console.log(count)
+  //console.log(count)                         
   // BLANK[1]
   
 
