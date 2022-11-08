@@ -7,7 +7,7 @@ function setup(){
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
   star(250, 50, 40);
-  //regularPolygon(3,400,50,40)
+  regularPolygon(5,350,50,40)
   
 }
 
@@ -33,23 +33,19 @@ function star(cx, cy, r){
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
-    console.log(theta);
-    console.log(x);
+  }
+    //console.log(theta);
+    //console.log(x);
+    endShape(CLOSE);
   }
 
  function regularPolygon(n,cx,cy,r){
   beginShape();
-  for(let i=0;i<10; i++){
-    let theta=PI*(n-2)/n;
+  for(let i=0;i<n; i++){
+    let theta=TWO_PI*i/n-HALF_PI;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
-
   }
- }
-
-
-
-
   endShape(CLOSE);
-}
+ }
